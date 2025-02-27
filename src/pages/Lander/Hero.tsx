@@ -16,7 +16,7 @@ const Hero = () => {
           className="absolute mt-10 top-0 left-0 w-full h-full object-cover rounded-lg"
           priority
         />
-        
+
         {/* Hero Image */}
         <Image
           src="/Lander/Hero_Image.png"

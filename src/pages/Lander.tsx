@@ -6,10 +6,8 @@ const Lander: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b pl-10 pr-12 from-white to-blue-50 px-6 flex flex-col">
       {/* Navbar Component */}
       <Navbar />
-
-      {/* Hero & Startups Section */}
       <section>
-        <Hero/>
+        <Hero />
       </section>
     </div>
   );

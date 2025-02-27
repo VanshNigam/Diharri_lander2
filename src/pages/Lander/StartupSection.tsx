@@ -1,37 +1,62 @@
-import React from "react";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import StartupSection from "./StartupSection";
 
-const Hero = () => {
+interface Startup {
+  logo: string;
+  name: string;
+  description?: string;
+  textColor: string;
+  gradient: string;
+}
+
+const startups: Startup[] = [
+  {
+    logo: "/Lander/Ibm_logo.png",
+    name: "IBM",
+    description: "AI Evaluator and Services",
+    textColor: "text-[#244187]",
+    gradient: "bg-[#EEF2FF] border border-[#A5B4FC]",
+  },
+  {
+    logo: "/Lander/Duolingo_logo.png",
+    name: "Duolingo",
+    textColor: "text-[#40BF4D]",
+    gradient: "bg-white border border-[#A5B4FC]",
+  },
+  {
+    logo: "/Lander/Udemy_logo.png",
+    name: "Udemy",
+    textColor: "text-[#9D55F5]",
+    gradient: "bg-white border border-[#A5B4FC]",
+  },
+];
+
+const StartupCard: React.FC<Startup> = ({ logo, name, description, textColor, gradient }) => {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between mt-1 px-9">
-      {/* Left: Hero Image with Overlay */}
-      <div className="relative w-full max-w-md md:max-w-lg">
-        {/* Main Hero Image */}
-        <Image
-          src="/Lander/Hero_Image.png"
-          alt="Hero Image"
-          width={642}
-          height={560}
-          className="ml-10 rounded-lg relative  z-10"
-        />
-
-        {/* Dark Gradient Overlay at Bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/60 to-transparent rounded-b-lg z-20"></div>
-
-        {/* Overlay Text */}
-        <div className="absolute bottom-8 left-8 text-white z-30">
-          <h2 className="text-3xl md:text-3xl font-bold leading-tight">
-            Connecting talent with visionary startups.
-          </h2>
-          <p className="text-sm mt-2">DISCOVER. CONNECT. GROW.</p>
+    <div className={`flex items-center w-[40vw] justify-between p-6 md:p-10 rounded-full shadow-md ${gradient}`}>
+      <div className="flex items-center gap-4">
+        <Image src={logo} alt={name} width={40} height={40} className="rounded-full" />
+        <div>
+          <p className={`text-[1.3rem] font-[450] ${textColor}`}>{name}</p>
+          {description && <p className="text-sm text-gray-500">{description}</p>}
         </div>
       </div>
-
-      {/* Right: Startups Section */}
-      <StartupSection />
-    </section>
+      <ArrowRight size={20} className="text-[#244187]" />
+    </div>
   );
 };
 
-export default Hero;
+const StartupSection: React.FC = () => {
+  return (
+    <div className="w-full md:w-[50%] flex flex-col items-end mt-8 md:mt-0">
+      <div className="mt-6 space-y-4 w-full">
+        <h3 className="text-[1.6rem] font-extrabold text-[#244187]">Start-ups to work for</h3>
+        {startups.map((startup, index) => (
+          <StartupCard key={index} {...startup} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default StartupSection;
