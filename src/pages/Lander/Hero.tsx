@@ -13,26 +13,32 @@ const Hero = () => {
           alt="Background"
           width={642}
           height={560}
-          className="absolute mt-10 top-0 left-0 w-full h-full object-cover rounded-lg"
+          className="absolute mt-10 top-0 left-0 w-full h-full object-cover "
           priority
         />
 
-        {/* Hero Image */}
-        <Image
-          src="/Lander/Hero_Image.png"
-          alt="Hero"
-          width={642}
-          height={560}
-          className="ml-10  z-10 rounded-lg"
-          priority
-        />
+        {/* Hero Image with Darker Left Side */}
+        <div className="relative ml-10  overflow-hidden">
+          {/* Hero Image */}
+          <Image
+            src="/Lander/Hero_Image.png"
+            alt="Hero"
+            width={642}
+            height={560}
+            className="w-full h-full object-cover"
+            priority
+          />
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[rgb(24,28,85)] via-[rgba(24,28,85,0.7)] to-transparent"></div>        </div>
+
+
 
         {/* Overlay Text */}
-        <div className="absolute inset-0 flex flex-col justify-end pl-10 pt-11 z-20">
-          <h2 className="text-white text-3xl md:text-3xl font-bold leading-tight">
+        <div className="absolute inset-0 flex flex-col justify-end pl-16 z-20">
+          <h2 className="text-white text-4xl md:text-4xl font-bold leading-tight">
             Connecting talent with visionary startups.
           </h2>
-          <p className="text-white text-sm mt-1">DISCOVER. CONNECT. GROW.</p>
+          <p className="text-white text-2xl mt-1">DISCOVER. CONNECT. GROW.</p>
         </div>
       </div>
 

@@ -35,12 +35,15 @@ const Navbar = () => {
           Blogs
         </Link>
         <button
+          type="button"
           className="flex items-center px-5 py-1 border-2 
-        border-blue-500 rounded-full text-blue-800  gap-4 hover:bg-blue-50 transition "
+  border-blue-500 rounded-full text-blue-800 gap-4 
+  hover:bg-blue-50 transition"
         >
-          <Search size={18} strokeWidth={2} className="text-blue-900 px-0" />
+          <Search size={18} strokeWidth={2} className="text-blue-900" />
           <span>Search</span>
         </button>
+
       </div>
 
       {/* Right Side - Search Bar & Buttons */}

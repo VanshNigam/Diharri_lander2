@@ -33,7 +33,7 @@ const startups: Startup[] = [
 
 const StartupCard: React.FC<Startup> = ({ logo, name, description, textColor, gradient }) => {
   return (
-    <div className={`flex items-center w-[40vw] justify-between p-6 md:p-10 rounded-full shadow-md ${gradient}`}>
+    <div className={`flex items-center w-[40vw] justify-between p-6 md:p-8 rounded-full shadow-md ${gradient}`}>
       <div className="flex items-center gap-4">
         <Image src={logo} alt={name} width={40} height={40} className="rounded-full" />
         <div>
