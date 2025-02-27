@@ -1,0 +1,3 @@
+AUTH0_API_IDENTIFIER=http://localhost:4000/graphql/
+AUTH0_DOMAIN=https://dev-87wu6vo2ghxuag3x.us.auth0.com/
+PORT=4000
