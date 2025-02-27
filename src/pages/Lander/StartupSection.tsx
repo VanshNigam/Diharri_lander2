@@ -15,19 +15,19 @@ const startups: Startup[] = [
     name: "IBM",
     description: "AI Evaluator and Services",
     textColor: "text-[#244187]",
-    gradient: "bg-[#EEF2FF] border border-[#A5B4FC]",
+    gradient: "bg-white hover:bg-[#EEF2FF] border border-[#A5B4FC]",
   },
   {
     logo: "/Lander/Duolingo_logo.png",
     name: "Duolingo",
     textColor: "text-[#40BF4D]",
-    gradient: "bg-white border border-[#A5B4FC]",
+    gradient: "bg-white hover:bg-[#EEF2FF] border border-[#A5B4FC]",
   },
   {
     logo: "/Lander/Udemy_logo.png",
     name: "Udemy",
     textColor: "text-[#9D55F5]",
-    gradient: "bg-white border border-[#A5B4FC]",
+    gradient: "bg-white hover:bg-[#EEF2FF] border border-[#A5B4FC]",
   },
 ];
 
